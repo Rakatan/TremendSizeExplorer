@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout_item"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:focusable="true"
+    android:clickable="true">
+
+    <ProgressBar
+        android:id="@+id/progressBar_blend_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+        android:progressDrawable="@drawable/progressbar_progress"
+        tools:progress="50"
+        android:max="1000000"/>
+
+    <ImageView
+        android:id="@+id/imageView_fileType"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_insert_drive_file_black_48dp"
+        android:adjustViewBounds="true"/>
+
+    <TextView
+        android:id="@+id/textView_fileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/imageView_fileType"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        tools:text="SampleFileName.mp4"
+        android:layout_toStartOf="@+id/textView_fileSize"/>
+
+    <TextView
+        android:id="@+id/textView_fileSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        tools:text="123Gb"
+        android:layout_marginEnd="8dp"/>
+
+</RelativeLayout>

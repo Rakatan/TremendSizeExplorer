@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TremendSizeExplorer</string>
+    <string name="toolbar_title">File size explorer</string>
+    <string name="button_up">Up one level</string>
+</resources>
